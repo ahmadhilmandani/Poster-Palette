@@ -33,7 +33,7 @@ export default function ServiceSection() {
       <div className='bg-brown-200 w-full min-h-[126px] flex items-center justify-center'>
         <div className='text-center flex-1'>
           <b className='block'>3+</b>
-          Tahun Beroberasi
+          Tahun Beroperasi
         </div>
         <div className='text-center flex-1 border-r border-l border-brown-300'>
           <b className='block'>13.413</b>
