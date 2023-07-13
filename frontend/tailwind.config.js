@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         brown: {
-          50: '#F3F1EC',
-          100: '#EDE9E7',
+          50: '#FDFCFB',
+          100: '#F3F1EC',
           200: '#E4E1DA',
           300: '#D7C39C',
           400: '#A48567',
