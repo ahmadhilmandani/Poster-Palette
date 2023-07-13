@@ -1,7 +1,7 @@
-import ClientTestimoni from './components/clientTestimoni'
-import OurPosterSection from './components/ourPosterSection/ourPosterSection'
 import LandingSection from './components/landingSection/landingSection'
 import ServiceSection from './components/serviceSection/serviceSetion'
+import OurPosterSection from './components/ourPosterSection/ourPosterSection'
+import ClientTestimoniSection from './components/clientTestimoniSection/clientTestimoniSection'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <LandingSection />
       <ServiceSection />
       <OurPosterSection />
-      <ClientTestimoni />
+      <ClientTestimoniSection />
     </main>
   )
 }

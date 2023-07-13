@@ -1,14 +1,6 @@
-export default function ClientTestimoni() {
-  function Card() {
-    return (
-      <div>
-        hai
-      </div>
-    )
-  }
+export default function ClientTestimoniSection() {
   return (
     <section>
-      <Card></Card>
 
 
     </section>

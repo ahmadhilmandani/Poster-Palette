@@ -1,10 +1,10 @@
-import szA4KPondasiTerkuat from '../../assets/poster/a4-pondasi-terkuat.svg'
-import szA4PondasiTerkuat from '../../assets/poster/a4-kamu-rumah.svg'
-import szA4TidakMungkinKecewa from '../../assets/poster/a4-tidak-mungkin-kecewa.svg'
+import szA4KPondasiTerkuat from '../../../../assets/poster/a4-pondasi-terkuat.svg'
+import szA4PondasiTerkuat from '../../../../assets/poster/a4-kamu-rumah.svg'
+import szA4TidakMungkinKecewa from '../../../../assets/poster/a4-tidak-mungkin-kecewa.svg'
 
-import sz20x30AllahMengampuniSemuaDosa from '../../assets/poster/20x30-Allah-mengampuni-semua-dosa.svg'
-import sz20x30HatiYangIkhlas from '../../assets/poster/20x30-hati-yang-ikhlas.svg'
-import sz20x30Mengenalmu from '../../assets/poster/20x30-mengenalmu.svg'
+import sz20x30AllahMengampuniSemuaDosa from '../../../../assets/poster/20x30-Allah-mengampuni-semua-dosa.svg'
+import sz20x30HatiYangIkhlas from '../../../../assets/poster/20x30-hati-yang-ikhlas.svg'
+import sz20x30Mengenalmu from '../../../../assets/poster/20x30-mengenalmu.svg'
 
 export default function OurPosterSection() {
   return (

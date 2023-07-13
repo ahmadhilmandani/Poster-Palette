@@ -1,7 +1,7 @@
 import { IconBook } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 
-import headerImg from '../../assets/hero-img.png'
+import headerImg from '../../../../assets/hero-img.png'
 
 export default function LandingSection() {
   return (
