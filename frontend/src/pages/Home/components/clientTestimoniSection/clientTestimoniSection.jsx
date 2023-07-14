@@ -11,9 +11,9 @@ import avatar8 from "../../../../assets/testimoni-card/avatar-8.png"
 
 export default function ClientTestimoniSection() {
   return (
-    <section className="px-20 mt-24">
+    <section className="xl:px-20 lg:px-10 px-3 mt-24">
       <h1 className="text-5xl">Testimoni Pembeli <span className="text-rose-600">❤</span></h1>
-      <div className="flex flex-wrap justify-between gap-2 mt-[54px]">
+      <div className="flex flex-wrap justify-center gap-4 mt-[54px]">
         <div>
           <TestimoniCard avatar={avatar1} avatarName={'John Doe'}>
             Saya sangat senang dengan kualitas poster yang saya terima dari percetakan ini. Mereka dicetak dengan sangat baik dan terlihat luar biasa. Saya pasti akan menggunakan layanan mereka lagi di masa depan.
