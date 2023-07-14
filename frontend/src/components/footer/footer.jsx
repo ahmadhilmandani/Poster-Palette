@@ -21,13 +21,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="max-w-[300px] w-full">
-          <h2 className="text-4xl text-white lg:mt-0 mt-20">Alamat</h2>
+          <h1 className=" text-white lg:mt-0 mt-20">Alamat</h1>
           <p className="text-white mt-[40px] text-[20px]">
             Jl. Kejora No. 1 Perumahan Satelit Desa Pabian Kabupaten Sumenep Provinsi Jawa Timur
           </p>
         </div>
         <div>
-          <h2 className="text-4xl text-white lg:mt-0 mt-20">Layanan</h2>
+          <h1 className=" text-white lg:mt-0 mt-20">Layanan</h1>
           <div className="flex gap-3 mt-[40px]">
             <IconChevronRight color="white" />
             <Link to={'/1'} className="text-white border-white">Katalog Poster Kami</Link>
@@ -37,7 +37,7 @@ export default function Footer() {
             <Link to={'/1'} className="text-white border-white">Pesan Desain poster</Link>
           </div>
           <div className="mt-20">
-            <h2 className="text-4xl text-white">Kontak</h2>
+            <h1 className=" text-white">Kontak</h1>
             <Link to={'mailto:ahmadhilmanlagi@gmail.com'} className="text-white border-white mt-[40px] block">ahmadhilmanlagi@gmail.com</Link>
           </div>
         </div>

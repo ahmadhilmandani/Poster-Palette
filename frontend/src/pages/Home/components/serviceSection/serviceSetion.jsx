@@ -4,14 +4,14 @@ export default function ServiceSection() {
   return (
     <section>
       <div className='bg-brown-100 w-full min-h-[366px] py-10 lg:px-20 px-3'>
-        <h1 className='lg:text-5xl text-3xl lg:leading-[150%] leading-[150%] text-center lg:text-left'>Layanan Menarik Kami!</h1>
+        <h1 className='text-center lg:text-left'>Layanan Menarik Kami!</h1>
         <div className='mt-12 lg:flex justify-between lg:gap-x-[150px]'>
           <div className='flex flex-1 flex-wrap lg:justify-start justify-center text-center lg:text-left items-start gap-7'>
             <div className='bg-emerald-950 rounded-md p-3'>
               <IconPaint stroke={2} size={44.1} color='#D7C39C' />
             </div>
             <div>
-              <h2 className='text-emerald-950 text-2xl'>Cocokan warna poster dengan ruangan anda</h2>
+              <h2 className='text-emerald-950'>Cocokan warna poster dengan ruangan anda</h2>
               <div className='text-brown-400 mt-5'>
                 Tidak perlu bingung lagi untuk menyesuaikan warna poster dengan ruangan anda! karena anda dapat langsung merubah warna poster di web kami!
               </div>
@@ -22,7 +22,7 @@ export default function ServiceSection() {
               <IconPhoto stroke={2} size={44.1} color='#D7C39C' />
             </div>
             <div>
-              <h2 className='text-emerald-950 text-2xl'>Kami siap menerima permintaan desain poster yang anda inginkan!</h2>
+              <h2 className='text-emerald-950'>Kami siap menerima permintaan desain poster yang anda inginkan!</h2>
               <div className='text-brown-400 mt-5'>
                 Anda dapat memesan jasa desain poster kepada kami apabila anda tidak menemukan poster anda inginkan di katalog kami!
               </div>

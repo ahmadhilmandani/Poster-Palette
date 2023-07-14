@@ -6,9 +6,28 @@
   @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
   * {
     font-family: "Playfair Display", serif;
-    @apply text-brown-500
+    @apply text-brown-500 leading-[150%];
   }
-  a{
-    @apply border-b-0 hover:border-b border-brown-500
+  :not(h1,h2,h3,h4,h5,h6){
+    @apply text-sm lg:text-base lg:leading-[150%] leading-[150%];
+  }
+  a {
+    @apply border-b-0 hover:border-b border-brown-500;
+  }
+  h1,h2,h3,h4,h5,h6{
+    @apply tracking-[100%] font-medium
+  }
+  h1 {
+    @apply lg:text-5xl text-3xl lg:leading-[150%] lg:tracking-[2%];
+  }
+  h2 {
+    @apply text-2xl;
+  }
+
+  .button {
+    @apply bg-emerald-950 text-brown-300 font-semibold rounded-md hover:opacity-90 flex justify-center items-center gap-2;
+  }
+  .active-link{
+    @apply bg-brown-200 px-3 py-1 rounded-full font-black;
   }
 }
