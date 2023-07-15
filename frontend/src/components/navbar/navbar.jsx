@@ -15,7 +15,7 @@ export default function Navbar() {
         <img src={logo} alt="" className="w-[120px]" />
         <div className="hidden lg:flex justify-between xl:gap-20 lg:gap-10 text-base">
           <Link to={'/'} className={`${url.pathname === '/' && 'active-link'}`}>Home</Link>
-          <Link to={'/'} className={`${url.pathname === '/1' && 'active-link'}`}>Katalog poster Kami</Link>
+          <Link to={'/catalog/custom-poster'} className={`${url.pathname === '/1' && 'active-link'}`}>Katalog poster Kami</Link>
           <Link to={'/'} className={`${url.pathname === '/2' && 'active-link'}`}>Pesan Desain Poster</Link>
           <Link to={'/'} className={`${url.pathname === '/3' && 'active-link'}`}>Perjalanan Kami</Link>
         </div>
