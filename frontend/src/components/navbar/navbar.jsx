@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link to={'/'} className={`${url.pathname === '/2' && 'active-link'}`}>Pesan Desain Poster</Link>
           <Link to={'/'} className={`${url.pathname === '/3' && 'active-link'}`}>Perjalanan Kami</Link>
         </div>
-        <Link to={'/'} className="lg:button hidden hover:border-b-0 text-sm px-10 py-2">Login</Link>
+        <Link to={'/login'} className="lg:button hidden hover:border-b-0 text-sm px-10 py-2">Login</Link>
         <IconMenu2 className="lg:hidden" onClick={() => setIsSubMenuClicked(!isSubMenuClicked)} />
       </nav>
         {isSubMenuClicked && <MobileSubMenu isSubMenuClicked={isSubMenuClicked} setIsSubMenuClicked={setIsSubMenuClicked} />}
