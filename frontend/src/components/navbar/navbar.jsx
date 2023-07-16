@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import { IconMenu2 } from "@tabler/icons-react"
 import MobileSubMenu from "./components/mobileSubMenu"
 import { useState } from "react"
+import ButtonPrimary from "../button/buttonPrimary"
 
 
 export default function Navbar() {
@@ -19,7 +20,9 @@ export default function Navbar() {
           <Link to={'/'} className={`${url.pathname === '/2' && 'active-link hover:border-0'}`}>Pesan Desain Poster</Link>
           <Link to={'/'} className={`${url.pathname === '/3' && 'active-link hover:border-0'}`}>Perjalanan Kami</Link>
         </div>
-        <Link to={'/login'} className="lg:button hidden hover:border-b-0 text-sm px-10 py-2">Login</Link>
+        <Link to={'/login'} className="lg:block hidden hover:border-b-0">
+          <ButtonPrimary tSize="sm" wSize="32">Login</ButtonPrimary>
+        </Link>
         <IconMenu2 className="lg:hidden" onClick={() => setIsSubMenuClicked(!isSubMenuClicked)} />
       </nav>
         {isSubMenuClicked && <MobileSubMenu isSubMenuClicked={isSubMenuClicked} setIsSubMenuClicked={setIsSubMenuClicked} />}
