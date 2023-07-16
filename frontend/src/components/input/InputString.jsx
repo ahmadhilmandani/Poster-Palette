@@ -2,7 +2,7 @@ import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import { useState } from "react";
 
 /* eslint-disable react/prop-types */
-export default function InputPassword({ name, id, value, placeholder, type, setIsPasswordVisible = null, isPasswordVisible = null }) {
+export default function InputString({ name, id, value, placeholder, type, setIsPasswordVisible = null, isPasswordVisible = null }) {
   const [isActive, setIsActive] = useState(false)
   return (
     <div className={`flex items-center justify-center gap-4 w-fit ${isActive === true ? 'border-b border-brown-400' : 'border-b border-b-slate-200'} max-w-[280px] w-full`}>
