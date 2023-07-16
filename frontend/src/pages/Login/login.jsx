@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InputPassword from "../../components/input/InputPassword";
+import InputString from "../../components/input/InputString";
 import { Link } from "react-router-dom";
 
 export default function Login() {
@@ -10,8 +10,8 @@ export default function Login() {
       <div className="rounded-md bg-white max-w-[620px] w-full h-[400px] flex justify-center items-center flex-col">
         <div className="border-b border-brown-400 px-5 py-3 font-bold text-center w-full">Login</div>
         <div className="mx-auto flex-1 mt-10">
-          <InputPassword type={'email'} placeholder={'Masukkan Email anda'} />
-          <InputPassword type={'password'} placeholder={'Masukkan Password anda'} setIsPasswordVisible={setIsPasswordVisible} isPasswordVisible={isPasswordVisible} />
+          <InputString type={'email'} placeholder={'Masukkan Email anda'} />
+          <InputString type={'password'} placeholder={'Masukkan Password anda'} setIsPasswordVisible={setIsPasswordVisible} isPasswordVisible={isPasswordVisible} />
           <p className="mt-10">Belum punya akun? <Link to={'/'}>Daftar disini!</Link></p>
         </div>
       </div>
