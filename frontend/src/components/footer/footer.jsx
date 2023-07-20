@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 
 export default function Footer() {
   return (
-    <footer className="bg-emerald-950 w-full min-h-[450px] mt-24 xl:px-20 lg:px-10 px-3 py-[55px]">
-      <div className="lg:flex lg:gap-20 justify-between">
+    <footer className="w-full min-h-[450px] pt-24">
+      <div className="lg:flex lg:gap-20 justify-between bg-emerald-950 xl:px-20 lg:px-10 px-3 py-[55px]">
         <div>
           <img src={logo} alt="" className="brightness-0 invert w-[242.37px]" />
           <p className="text-white w-full max-w-[205px] text-[20px] mt-[26px]">

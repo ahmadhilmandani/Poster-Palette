@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InputRadioColor from "../../../components/input/InputRadioColor";
+import InputRadio from "../../../components/input/InputRadio";
 import InputNumber from "../../../components/input/InputNumber";
 import ButtonPrimary from "../../../components/button/buttonPrimary";
 import ButtonSecondary from "../../../components/button/buttonSecondary";
@@ -7,7 +7,7 @@ import { IconShoppingCartPlus } from "@tabler/icons-react";
 import { IconPalette } from "@tabler/icons-react";
 
 export default function CustomPosterCatalog() {
-  const [colorChoosed, setColorChoosed] = useState(null)
+  const [choosed, setChoosed] = useState(null)
   const [quantity, setQuantity] = useState(1)
 
   return (
@@ -41,7 +41,7 @@ export default function CustomPosterCatalog() {
           <h2>
             {`Poster "Rumah Itu Kamu" A4`}
           </h2>
-          <h1 className="bg-brown-100 px-6 py-6 mt-10 text-emerald-950">
+          <h1 className="bg-brown-100 px-6 py-6 mt-10 text-emerald-950 rounded-[4px]">
             Rp. 75.000
           </h1>
           <div className="flex gap-8 mt-10 items-center">
@@ -57,9 +57,15 @@ export default function CustomPosterCatalog() {
               Warna
             </div>
             <div className="flex gap-2">
-              <InputRadioColor inputId={'color2'} label={'Cokelat Muda'} InputName={'color'} inputVal={'brown'} setColorChoosed={setColorChoosed} colorChoosed={colorChoosed} />
-              <InputRadioColor inputId={'color3'} label={'Cokelat Tua'} InputName={'color'} inputVal={'dark-brown'} setColorChoosed={setColorChoosed} colorChoosed={colorChoosed} />
-              <InputRadioColor inputId={'color1'} label={'Hijau'} InputName={'color'} inputVal={'green'} setColorChoosed={setColorChoosed} colorChoosed={colorChoosed} />
+              <InputRadio inputId={'color2'} InputName={'color'} inputVal={'brown'} setChoosed={setChoosed} choosed={choosed} >
+                Cokelat Muda
+                </InputRadio>
+              <InputRadio inputId={'color3'} InputName={'color'} inputVal={'dark-brown'} setChoosed={setChoosed} choosed={choosed} >
+                Cokelat Tua
+                </InputRadio>
+              <InputRadio inputId={'color1'} InputName={'color'} inputVal={'green'} setChoosed={setChoosed} choosed={choosed} >
+                Hijau
+                </InputRadio>
             </div>
           </div>
           <div className="flex gap-8 mt-6 items-center">
