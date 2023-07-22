@@ -10,8 +10,8 @@ export default function MobileSubMenu({ isSubMenuClicked, setIsSubMenuClicked })
         <IconX onClick={() => setIsSubMenuClicked(!isSubMenuClicked)} className="float-right" />
         <div className="clear-both">
           <Link to={'/'} className={`${url.pathname === '/' && 'active-link'} block w-fit mt-16`}>Home</Link>
-          <Link to={'/'} className={`${url.pathname === '/1' && 'active-link'} block w-fit mt-8`}>Katalog poster Kami</Link>
-          <Link to={'/'} className={`${url.pathname === '/2' && 'active-link'} block w-fit mt-8`}>Pesan Desain Poster</Link>
+          <Link to={'/catalog'} className={`${url.pathname.startsWith('/catalog') && 'active-link'} block w-fit mt-8`}>Katalog poster Kami</Link>
+          <Link to={'/order-poster'} className={`${url.pathname.startsWith('/order-poster') && 'active-link'} block w-fit mt-8`}>Pesan Desain Poster</Link>
           <Link to={'/'} className={`${url.pathname === '/3' && 'active-link'} block w-fit mt-8`}>Perjalanan Kami</Link>
         </div>
       </div>

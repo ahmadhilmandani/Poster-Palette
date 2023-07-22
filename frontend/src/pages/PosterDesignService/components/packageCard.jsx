@@ -2,7 +2,7 @@
 export default function PackageCard({ title = 'REGULER', revision, minDaysWork, maxDaysWork, price }) {
 
   return (
-    <div className={`w-[185px] p-5 rounded-md text-center ${title.toUpperCase() === 'REGULER' ? ' bg-brown-100' :
+    <div className={`lg:w-[145px] w-full p-5 rounded-md text-center ${title.toUpperCase() === 'REGULER' ? ' bg-brown-100' :
       title.toUpperCase() === 'PREMIUM' ? 'text-white bg-brown-400' :
         title.toUpperCase() === 'ELITE' && 'text-brown-300 bg-emerald-950'
       }`}>

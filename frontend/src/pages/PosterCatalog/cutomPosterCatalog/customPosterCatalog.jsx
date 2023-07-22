@@ -12,8 +12,8 @@ export default function CustomPosterCatalog() {
 
   return (
     <>
-      <div className="w-full min-h-screen flex mt-32 justify-center px-20 gap-14">
-        <div className="w-[335px] aspect-[29.7/42] fixed top-3mt-32 left-20 z-50">
+      <div className="w-full min-h-screen md:flex mt-32 justify-center xl:px-20 lg:px-10 px-3 gap-14">
+        <div className="w-full md:w-[260px] lg:w-[335px] aspect-[29.7/42] md:fixed static top-3 mt-32 left-20 z-50">
           <svg width="100%" height="100%" viewBox="0 0 1191 1684" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_115_289)">
               <rect width="100%" height="100%" fill="#D7C39C" />
@@ -35,40 +35,41 @@ export default function CustomPosterCatalog() {
           </svg>
         </div>
 
-        <div className="w-[420px] aspect-[21/29.7]">
+        <div className="w-[350px] aspect-[21/29.7] hidden md:block">
         </div>
-        <div className="flex-1">
+
+        <div className="flex-1 lg:mt-0 mt-14">
           <h2>
-            {`Poster "Rumah Itu Kamu" A4`}
+            {`Poster "Rumah Itu Kamu"`}
           </h2>
-          <h1 className="bg-brown-100 px-6 py-6 mt-10 text-emerald-950 rounded-[4px]">
+          <h1 className="bg-brown-100 px-6 py-6 md:mt-10 mt-5 text-emerald-950 rounded-[4px]">
             Rp. 75.000
           </h1>
-          <div className="flex gap-8 mt-10 items-center">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 gap-y md:mt-10 mt-5 items-center">
             <div className="w-full lg:w-[160px]">
               Pengiriman Tersedia
             </div>
-            <div>
+            <div className="rounded-sm px-3 py-2 text-xs bg-brown-100">
               Seluruh Indonesia
             </div>
           </div>
-          <div className="flex gap-8 mt-6 items-center">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 md:mt-10 mt-5 items-center">
             <div className="w-full lg:w-[160px]">
               Warna
             </div>
             <div className="flex gap-2">
               <InputRadio inputId={'color2'} InputName={'color'} inputVal={'brown'} setChoosed={setChoosed} choosed={choosed} >
                 Cokelat Muda
-                </InputRadio>
+              </InputRadio>
               <InputRadio inputId={'color3'} InputName={'color'} inputVal={'dark-brown'} setChoosed={setChoosed} choosed={choosed} >
                 Cokelat Tua
-                </InputRadio>
+              </InputRadio>
               <InputRadio inputId={'color1'} InputName={'color'} inputVal={'green'} setChoosed={setChoosed} choosed={choosed} >
                 Hijau
-                </InputRadio>
+              </InputRadio>
             </div>
           </div>
-          <div className="flex gap-8 mt-6 items-center">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 md:mt-10 mt-5 items-center">
             <div className="w-full lg:w-[160px]">
               Jumlah
             </div>
@@ -76,20 +77,20 @@ export default function CustomPosterCatalog() {
               <InputNumber quantity={quantity} setQuantity={setQuantity} leftItem={100} />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3 mt-10">
+          <div className="grid grid-cols-2 gap-3 md:mt-10 mt-5">
             <div className="col-span-2">
               <ButtonSecondary>
                 <IconPalette color={"#4F5F4F"} />
                 Kustomisasi Warna
               </ButtonSecondary>
             </div>
-            <div>
+            <div className="lg:col-span-1 col-span-2">
               <ButtonSecondary>
                 <IconShoppingCartPlus color={"#4F5F4F"} />
                 Masukkan ke Keranjang
               </ButtonSecondary>
             </div>
-            <div>
+            <div className="lg:col-span-1 col-span-2">
               <ButtonPrimary>Beli Sekarang</ButtonPrimary>
             </div>
           </div>

@@ -17,37 +17,37 @@ export default function PosterCatalog() {
       <PageBanner h1={"Katalog Poster Kami!"}>
         Lengkapi ruang Anda dengan sentuhan unik dan inspiratif, Lalu Temukan keindahan dalam beragam karya seni dengan katalog poster kami.
       </PageBanner>
-      <main className="w-full min-h-screen bg-brown-50">
+      <main className="w-full min-h-screen bg-brown-50 xl:px-20 lg:px-10 px-3">
         <div className="mt-16 flex flex-wrap gap-10 justify-center items-center">
           <Link to={'/catalog/1'} className="hover:opacity-80">
-            <div className="w-[400px] rounded mt-2">
+            <div className="max-w-[400px] w-full rounded mt-2">
               <CatalogCard posterImg={A401} left={20} sold={100} titlePoster={"Rumah Bukan Perkara Letak Geografis"} />
             </div>
           </Link>
           <Link to={'/catalog/1'}>
-            <div className="w-[400px] rounded mt-2">
+            <div className="max-w-[400px] w-full rounded mt-2">
               <CatalogCard posterImg={A402} left={20} sold={100} titlePoster={"Rumah Bukan Perkara Letak Geografis"} />
             </div>
           </Link>
           <Link to={'/catalog/1'}>
-            <div className="w-[400px] rounded mt-2">
+            <div className="max-w-[400px] w-full rounded mt-2">
               <CatalogCard posterImg={A403} left={20} sold={100} titlePoster={"Rumah Bukan Perkara Letak Geografis"} />
             </div>
           </Link>
         </div>
         <div className="mt-16 flex flex-wrap gap-10 justify-center items-center">
           <Link to={'/catalog/1'}>
-            <div className="w-[280px] rounded mt-2">
+            <div className="md:w-[280px] w-[240px] rounded mt-2">
               <CatalogCard posterImg={P20x3001} left={20} sold={100} titlePoster={"Rumah Bukan Perkara Letak Geografis"} />
             </div>
           </Link>
           <Link to={'/catalog/1'}>
-            <div className="w-[280px] rounded mt-2">
+            <div className="md:w-[280px] w-[240px] rounded mt-2">
               <CatalogCard posterImg={P20x3002} left={20} sold={100} titlePoster={"Rumah Bukan Perkara Letak Geografis"} />
             </div>
           </Link>
           <Link to={'/catalog/1'}>
-            <div className="w-[280px] rounded mt-2">
+            <div className="md:w-[280px] w-[240px] rounded mt-2">
               <CatalogCard posterImg={P20x3003} left={20} sold={100} titlePoster={"Rumah Bukan Perkara Letak Geografis"} />
             </div>
           </Link>
