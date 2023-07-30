@@ -50,4 +50,19 @@ const signUp = (req, res) => {
   })
 }
 
-module.exports = { signUp }
+const login = (req, res) => {
+  const post = {
+    email: req.body.email,
+    password: md5(req.body.password)
+  }
+
+  dbConnect.query(`SELECT email, username, address FROM ?? WHERE ??=? AND ??=?`, ["user", "email", post.email, "password", post.password], (err, rows, field) => {
+    if (err) {
+      queryError(res)
+    } else {
+      querySuccess(res, rows)
+    }
+  })
+}
+
+module.exports = { signUp, login }
