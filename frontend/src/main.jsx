@@ -9,6 +9,7 @@ import Login from './pages/Login/login'
 import CustomPosterCatalog from './pages/PosterCatalog/cutomPosterCatalog/customPosterCatalog'
 import PosterDesignService from './pages/PosterDesignService/posterDesignService'
 import PosterCatalog from './pages/PosterCatalog/posterCatalog'
+import SignUp from './pages/SignUp/signUp'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/sign-up' element={<SignUp />} />
             <Route path='/catalog' element={<PosterCatalog />} />
             <Route path='/catalog/:id' element={<CustomPosterCatalog />} />
             <Route path='/catalog/custom-poster' element={<CustomPosterCatalog />} />
