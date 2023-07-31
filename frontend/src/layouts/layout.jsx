@@ -4,10 +4,9 @@ import Footer from "../components/footer/footer"
 import React, { useEffect, useState } from "react";
 import { getLocalStorage } from "../utils/storage";
 
+export const StorageContext = React.createContext();
 
 export default function Layout() {
-  const data = "Ini adalah data dari konteks";
-  const MyContext = React.createContext();
 
   const [localStorageState, setLocalStorageState] = useState({})
 
@@ -21,12 +20,12 @@ export default function Layout() {
 
 
   return (
-    <MyContext.Provider value={data}>
+    <StorageContext.Provider value={localStorageState}>
       <div className="w-full min-h-screen">
         <Navbar />
         <Outlet />
         <Footer />
       </div>
-    </MyContext.Provider>
+    </StorageContext.Provider>
   )
 }
