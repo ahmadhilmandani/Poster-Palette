@@ -1,6 +1,6 @@
 import { useState } from "react";
 import InputString from "../../components/input/InputString";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import headerImg from "../../assets/hero-img.png"
 import axios from 'axios';
@@ -12,6 +12,9 @@ export default function SignUp() {
   const [password, setPassword] = useState(null)
   const [address, setAddress] = useState(null)
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+
+  const Navigate = useNavigate()
+
 
   const handleSignUp = () => {
     setLoading(true)
@@ -27,8 +30,8 @@ export default function SignUp() {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       }
-    }).then((res) => {
-      console.log(res)
+    }).then(() => {
+      Navigate('/login')
     }).catch((err) => {
       console.log(err)
     }).finally(() => {
@@ -39,7 +42,8 @@ export default function SignUp() {
 
   return (
     <>
-      {loading === true &&
+      {
+        loading === true &&
         <div className="bg-white w-full min-h-screen fixed top-0 bottom-0 left-0 right-0 z-[400]">
         </div>
       }

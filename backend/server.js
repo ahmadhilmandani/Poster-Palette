@@ -12,6 +12,11 @@ app.use(morgan('dev'))
 const routes = require('./routes')
 routes(app)
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.use('/auth', require('./middleware'))
 
 app.listen(3000, () => {
