@@ -15,6 +15,7 @@ export function getLocalStorage() {
 
   if (data.username !== null && data.email !== null && data.address !== null)
     return data
+  return null
 }
 
 export function removeAllLocalStorage() {

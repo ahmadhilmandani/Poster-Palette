@@ -10,6 +10,9 @@ import CustomPosterCatalog from './pages/PosterCatalog/cutomPosterCatalog/custom
 import PosterDesignService from './pages/PosterDesignService/posterDesignService'
 import PosterCatalog from './pages/PosterCatalog/posterCatalog'
 import SignUp from './pages/SignUp/signUp'
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -27,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='/order-poster' element={<PosterDesignService />} />
           </Route>
         </Routes>
+        <ToastContainer />
       </div>
     </BrowserRouter>
   </React.StrictMode>,

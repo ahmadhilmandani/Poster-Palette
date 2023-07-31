@@ -12,7 +12,7 @@ export default function Navbar() {
   const url = useLocation()
   const [isIconUserClick, setIsIconUserClick] = useState(false)
   const [isSubMenuClicked, setIsSubMenuClicked] = useState(false)
-  const localStorageState = useContext(StorageContext)
+  const { localStorageState } = useContext(StorageContext)
   return (
     <>
       <nav className="fixed z-40 top-0 left-0 right-0 w-full shadow-xl h-20 py-3 px-3 xl:px-20 lg:px-10 flex justify-between items-center bg-brown-50">
@@ -23,7 +23,7 @@ export default function Navbar() {
           <Link to={'/order-poster'} className={`${url.pathname.startsWith('/order-poster') && 'active-link hover:border-0'}`}>Jasa Desain Poster</Link>
           <Link to={'/'} className={`${url.pathname === '/3' && 'active-link hover:border-0'}`}>Perjalanan Kami</Link>
         </div>
-        {localStorageState !== null && localStorageState !== undefined && localStorageState !== 0 ?
+        {(localStorageState != null && localStorageState != undefined && localStorageState != 0) ?
           <div className="flex gap-5">
             <div className="rounded-full p-2">
               <IconShoppingCart color="#433B31" />
@@ -49,8 +49,7 @@ export default function Navbar() {
               </Link>
               <Link to={'/'} className="lg:block hidden mt-5" onClick={() => {
                 removeAllLocalStorage()
-                Navigate('/')
-                window.location.reload();
+                Navigate(url.pathname)
               }}>
                 Logout
               </Link>

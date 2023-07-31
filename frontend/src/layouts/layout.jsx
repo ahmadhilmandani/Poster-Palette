@@ -8,19 +8,14 @@ export const StorageContext = React.createContext();
 
 export default function Layout() {
 
-  const [localStorageState, setLocalStorageState] = useState({})
+  const [localStorageState, setLocalStorageState] = useState(null)
 
   useEffect(() => {
     setLocalStorageState(getLocalStorage())
   }, [])
 
-  useEffect(() => {
-    console.log(localStorageState)
-  }, [localStorageState])
-
-
   return (
-    <StorageContext.Provider value={localStorageState}>
+    <StorageContext.Provider value={{localStorageState, setLocalStorageState}}>
       <div className="w-full min-h-screen">
         <Navbar />
         <Outlet />

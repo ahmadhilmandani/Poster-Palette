@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import InputString from "../../components/input/InputString";
 import { Link } from "react-router-dom";
 import headerImg from "../../assets/hero-img.png"
 import axios from "axios";
-import { setLocalStorage } from "../../utils/storage";
+import { getLocalStorage, setLocalStorage } from "../../utils/storage";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+import { StorageContext } from "../../layouts/layout"
+
 
 
 export default function Login() {
@@ -12,6 +15,8 @@ export default function Login() {
   const [email, setEmail] = useState(null)
   const [password, setPassword] = useState(null)
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+
+  const {setLocalStorageState} = useContext(StorageContext)
 
   const Navigate = useNavigate()
 
@@ -27,9 +32,11 @@ export default function Login() {
       }
     }).then((res) => {
       setLocalStorage(res.data.data[0].email, res.data.data[0].username, res.data.data[0].address)
+      setLocalStorageState(getLocalStorage())
+      toast.success("Selamat Datang!")
       Navigate('/')
-      window.location.reload();
     }).catch((err) => {
+      toast.error("Yaahh :( Yuk, Coba lagi!")
       Navigate('/login')
       console.log(err)
     }).finally(() => {

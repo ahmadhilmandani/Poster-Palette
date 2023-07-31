@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import headerImg from "../../assets/hero-img.png"
 import axios from 'axios';
+import { toast } from "react-toastify";
 
 export default function SignUp() {
   const [loading, setLoading] = useState(false)
@@ -16,7 +17,8 @@ export default function SignUp() {
   const Navigate = useNavigate()
 
 
-  const handleSignUp = () => {
+  const handleSignUp = (e) => {
+    e.preventDefault()
     setLoading(true)
     const requestData = new URLSearchParams();
     requestData.append('username', username);
@@ -31,8 +33,10 @@ export default function SignUp() {
         "Content-Type": "application/x-www-form-urlencoded"
       }
     }).then(() => {
+      toast.success("Berhasil daftar! Yuk, Login!")
       Navigate('/login')
     }).catch((err) => {
+      toast.error("Maaf kak, sepertinya gagal :( Yuk, Coba lagi!")
       console.log(err)
     }).finally(() => {
       setLoading(false)
@@ -57,7 +61,7 @@ export default function SignUp() {
               <InputString type={'password'} placeholder={'Masukkan Password Anda'} setValue={setPassword} setIsPasswordVisible={setIsPasswordVisible} isPasswordVisible={isPasswordVisible} />
               <InputString type={'text'} placeholder={'Masukkan Alamat Lengkap Anda'} setValue={setAddress} />
               <span className="text-sm text-slate-500 mt-2 px-3">NB: digunakan untuk mengirimkan poster anda</span>
-              <button className="block w-full py-4 rounded-lg mt-6 bg-emerald-950 text-brown-300" onClick={() => { handleSignUp() }}>
+              <button className="block w-full py-4 rounded-lg mt-6 bg-emerald-950 text-brown-300" onClick={(e) => { handleSignUp(e) }}>
                 Sign Up
               </button>
               <p className="mt-10">Sudah punya akun? <Link to={'/login'} className="text-brown-400">Login aja!</Link></p>
